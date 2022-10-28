@@ -1,6 +1,9 @@
 let passwords;
 
 window.onload = function(){
+    document.documentElement.style.setProperty('--screenWidth', '#YOURCOLOR');
+    document.documentElement.style.setProperty('--screenHeight', '#YOURCOLOR');
+
     loadPasswords();
     updatePasswordList();
 }

@@ -1,12 +1,15 @@
 :root{
+    --screenWidth: 100vw;
+    --screenHeight: 100vh;
+
     --navBarHeight: 100px;
     --topBarHeight: 100px;
     --listItemHeight: 50px;
     --inputHeight: 20px;
-    --iconSize: min(150px, 70vw);
+    --iconSize: min(150px, 0.7 * var(--screenWidth));
     --gapSize: 15px;
     --counterHeight: 50px;
-    --navigationButtonSize: min(50px, calc((100vw - var(--iconSize) - 4 * var(--gapSize)) / 2));
+    --navigationButtonSize: min(50px, calc((var(--screenWidth) - var(--iconSize) - 4 * var(--gapSize)) / 2));
     --editHeight: 100px;
 
     --theme-color-0: #FFF;
@@ -34,8 +37,8 @@
 
 body{
     margin: 0;
-    width: 100vw;
-    height: 100vh;
+    width: var(--screenWidth);
+    height: var(--screenHeight);
     background-color: var(--theme-color-0);
 }
 
