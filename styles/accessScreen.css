@@ -67,8 +67,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: calc(0.6 * min(100vw, calc(100vh - var(--iconSize) - 2 * var(--inputHeight) - 4 * var(--gapSize) - var(--counterHeight))));
-    height: calc(0.6 * min(100vw, calc(100vh - var(--iconSize) - 2 * var(--inputHeight) - 4 * var(--gapSize) - var(--counterHeight))));
+    width: calc(0.6 * min(var(--screenWidth), calc(var(--screenHeight) - var(--iconSize) - 2 * var(--inputHeight) - 4 * var(--gapSize) - var(--counterHeight))));
+    height: calc(0.6 * min(var(--screenWidth), calc(var(--screenHeight) - var(--iconSize) - 2 * var(--inputHeight) - 4 * var(--gapSize) - var(--counterHeight))));
     background-color: var(--theme-color-1);
     border: none;
     border-radius: 50%;

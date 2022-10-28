@@ -36,8 +36,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: calc(0.8 * min(100vw, calc(100vh - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
-    height: calc(0.8 * min(100vw, calc(100vh - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+    width: calc(0.8 * min(var(--screenWidth), calc(var(--screenHeight) - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+    height: calc(0.8 * min(var(--screenWidth), calc(var(--screenHeight) - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
     background-color: var(--theme-color-1);
     border: none;
     border-radius: 50%;

@@ -16,7 +16,7 @@
 
 #listScreenManager+*>ul{
     list-style-type: none;
-    height: calc(100vh - var(--topBarHeight) - var(--navBarHeight));
+    height: calc(var(--screenHeight) - var(--topBarHeight) - var(--navBarHeight));
     margin: 0;
     padding: 0;
     overflow-y: scroll;
@@ -40,7 +40,7 @@
 
 #listScreenManager+*>ul>li:last-child{
     border-color: transparent;
-    margin-bottom: calc(100vh - var(--topBarHeight) - var(--navBarHeight) - var(--listItemHeight));
+    margin-bottom: calc(var(--screenHeight) - var(--topBarHeight) - var(--navBarHeight) - var(--listItemHeight));
 }
 
 #listScreenManager+*>ul>li>*:last-child{
