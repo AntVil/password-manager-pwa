@@ -1,0 +1,32 @@
+#mainScreenManager+*{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    width: 100%;
+    height: 100%;
+}
+
+#mainScreenManager+*>nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: var(--navBarHeight);
+    text-align: center;
+    background-color: var(--theme-color-1);
+}
+
+#listScreenManager:checked~nav>label[for="listScreenManager"],
+#accessScreenManager:checked~nav>label[for="listScreenManager"],
+#editScreenManager:checked~nav>label[for="listScreenManager"],
+#createScreenManager:checked~nav>label[for="createScreenManager"],
+#settingsScreenManager:checked~nav>label[for="settingsScreenManager"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(0.75 * var(--navBarHeight));
+    height: calc(0.75 * var(--navBarHeight));
+    margin: auto;
+    background-color: var(--theme-color-2);
+    border-radius: 50%;
+}

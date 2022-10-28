@@ -1,0 +1,48 @@
+:root{
+    --navBarHeight: 100px;
+    --topBarHeight: 100px;
+    --listItemHeight: 50px;
+    --inputHeight: 20px;
+    --iconSize: min(150px, 70vw);
+    --gapSize: 15px;
+    --counterHeight: 50px;
+    --navigationButtonSize: min(50px, calc((100vw - var(--iconSize) - 4 * var(--gapSize)) / 2));
+    --editHeight: 100px;
+
+    --theme-color-0: #FFF;
+    --theme-color-1: #DDD;
+    --theme-color-2: #CCC;
+    --font-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --theme-color-0: #333;
+        --theme-color-1: #555;
+        --theme-color-2: #777;
+        --font-color: #FFF;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-size: large;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--theme-color-0);
+}
+
+.layoutManager{
+    display: none;
+}
+
+.layoutManager:not(:checked)+*{
+    display: none !important;
+}

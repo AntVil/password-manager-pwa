@@ -1,0 +1,14 @@
+#settingsScreenManager+*{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--theme-color-0);
+}
+
+#settingsScreenManager+*>*:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--topBarHeight);
+    text-align: center;
+    background-color: var(--theme-color-1);
+}

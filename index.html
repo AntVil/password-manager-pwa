@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>password-manager</title>
+        <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+        
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/loginScreen.css" />
+        <link rel="stylesheet" href="./styles/mainScreen.css" />
+        <link rel="stylesheet" href="./styles/listScreen.css" />
+        <link rel="stylesheet" href="./styles/accessScreen.css" />
+        <link rel="stylesheet" href="./styles/editScreen.css" />
+        <link rel="stylesheet" href="./styles/createScreen.css" />
+        <link rel="stylesheet" href="./styles/settingsScreen.css" />
+
+        <link rel="manifest" href="manifest.json" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <meta name="theme-color" content="white" />
+
+        <script src="./scripts/index.js"></script>
+    </head>
+    <body>
+        <input id="loginScreenManager" name="loginNavigation" class="layoutManager" type="radio" checked />
+        <header>
+            <input id="masterPassword" type="password" />
+            <label for="mainScreenManager">login</label>
+        </header>
+
+        <input id="mainScreenManager" name="loginNavigation" class="layoutManager" type="radio" />
+        <main>
+            <input id="listScreenManager" name="contentNavigation" class="layoutManager" type="radio" checked />
+            <section>
+                <div>
+                    <select>
+                        <option>sort name</option>
+                        <option>sort label</option>
+                    </select>
+
+                    <h3>Passwords</h3>
+                </div>
+                <ul id="passwordList"></ul>
+            </section>
+
+            <input id="accessScreenManager" name="contentNavigation" class="layoutManager" type="radio" />
+            <section>
+                <div>
+                    <label for="listScreenManager">b</label>
+                    <div>
+                        <img id="accessPasswordIcon" src="password.png" />
+                        <p id="accessPasswordName">name</p>
+                        <p id="accessPasswordLabel">label</p>
+                    </div>
+                    <label for="editScreenManager">e</label>
+                </div>
+                <button>access</button>
+                <div>
+                    <button onclick="this.nextElementSibling.innerText = Math.max(this.nextElementSibling.innerText-1, 0)">-</button>
+                    <p id="counterValue">0</p>
+                    <button onclick="this.previousElementSibling.innerText++">+</button>
+                </div>
+            </section>
+
+            <input id="editScreenManager" name="contentNavigation" class="layoutManager" type="radio" />
+            <section>
+                <div>
+                    <label for="accessScreenManager">b</label>
+                    <div>
+                        <img id="editPasswordIcon" src="password.png" />
+                        <p id="editPasswordName">name</p>
+                        <p id="editPasswordLabel">label</p>
+                    </div>
+                    <label for="accessScreenManager">e</label>
+                </div>
+                <div>
+                    <span>setting</span>
+                    <span>input</span>
+                    <span>setting</span>
+                    <span>input</span>
+                </div>
+            </section>
+
+            <input id="createScreenManager" name="contentNavigation" class="layoutManager" type="radio" />
+            <section>
+                <img id="createPasswordIcon" src="password.png" />
+                <input id="createPasswordName" placeholder="Name" />
+                <input id="createPasswordLabel" placeholder="Label" />
+                <button onclick="createPassword()">create</button>
+            </section>
+
+            <input id="settingsScreenManager" name="contentNavigation" class="layoutManager" type="radio" />
+            <section>
+                <div><h3>Settings</h3></div>
+
+            </section>
+
+            <nav>
+                <label for="listScreenManager">list</label>
+                <label for="createScreenManager">+</label>
+                <label for="settingsScreenManager">settings</label>
+            </nav>
+        </main>
+    </body>
+</html>

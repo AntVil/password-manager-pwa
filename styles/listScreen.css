@@ -1,0 +1,51 @@
+#listScreenManager+*{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--theme-color-0);
+}
+
+#listScreenManager+*>*:first-child{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+    height: var(--topBarHeight);
+    text-align: center;
+    background-color: var(--theme-color-1);
+}
+
+#listScreenManager+*>ul{
+    list-style-type: none;
+    height: calc(100vh - var(--topBarHeight) - var(--navBarHeight));
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+#listScreenManager+*>ul>li{
+    display: grid;
+    grid-template-columns: var(--listItemHeight) 1fr auto;
+    align-items: center;
+    justify-content: center;
+    height: var(--listItemHeight);
+    padding: 0 10px;
+    border-bottom: 1px solid var(--theme-color-1);
+}
+
+#listScreenManager+*>ul>li>img{
+    width: var(--listItemHeight);
+    height: var(--listItemHeight);
+    border-radius: 50%;
+}
+
+#listScreenManager+*>ul>li:last-child{
+    border-color: transparent;
+    margin-bottom: calc(100vh - var(--topBarHeight) - var(--navBarHeight) - var(--listItemHeight));
+}
+
+#listScreenManager+*>ul>li>*:last-child{
+    padding: 5px;
+    text-align: center;
+    background-color: var(--theme-color-1);
+    border-radius: 5px;
+}

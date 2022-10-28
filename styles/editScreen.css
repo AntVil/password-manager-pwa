@@ -1,0 +1,72 @@
+#editScreenManager+*{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(var(--iconSize) + 2 * var(--inputHeight) + 4 * var(--gapSize)) 1fr;
+}
+
+#editScreenManager+*>*:first-child{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+#editScreenManager+*>*:first-child>*:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--navigationButtonSize);
+    height: var(--navigationButtonSize);
+    margin-left: var(--gapSize);
+    margin-top: var(--gapSize);
+    text-align: center;
+    background-color: var(--theme-color-1);
+    border: none;
+    border-radius: 50%;
+}
+
+#editScreenManager+*>*:first-child>*:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--navigationButtonSize);
+    height: var(--navigationButtonSize);
+    margin-right: var(--gapSize);
+    margin-top: var(--gapSize);
+    text-align: center;
+    background-color: var(--theme-color-1);
+    border: none;
+    border-radius: 50%;
+}
+
+#editScreenManager+*>*:first-child>div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--iconSize) var(--inputHeight) var(--inputHeight);
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--gapSize);
+    gap: var(--gapSize);
+    background-color: var(--theme-color-0);
+}
+
+#editScreenManager+*>*:first-child>div>img{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--iconSize);
+    height: var(--iconSize);
+    border-radius: 50%;
+}
+
+#editScreenManager+*>*:last-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    height: 100%;
+    padding: var(--gapSize);
+    overflow-y: scroll;
+}

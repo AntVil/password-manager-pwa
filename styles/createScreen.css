@@ -1,0 +1,44 @@
+#createScreenManager+*{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--iconSize) var(--inputHeight) var(--inputHeight) auto;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--gapSize);
+    gap: var(--gapSize);
+    background-color: var(--theme-color-0);
+}
+
+#createScreenManager+*>img{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--iconSize);
+    height: var(--iconSize);
+    border-radius: 50%;
+}
+
+#createScreenManager+*>input{
+    height: var(--inputHeight);
+    text-align: center;
+    background-color: var(--theme-color-2);
+    border: none;
+}
+
+#createScreenManager+*>input::placeholder{
+    color: var(--theme-color-0);
+    opacity: 0.5;
+}
+
+#createScreenManager+*>button {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(0.8 * min(100vw, calc(100vh - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+    height: calc(0.8 * min(100vw, calc(100vh - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+    background-color: var(--theme-color-1);
+    border: none;
+    border-radius: 50%;
+}
