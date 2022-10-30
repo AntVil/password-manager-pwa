@@ -49,11 +49,17 @@ function updateAccessPassword(p){
 }
 
 function createPassword(){
-    let name = document.getElementById("passwordName").value.trim();
-    let label = document.getElementById("passwordLabel").value.trim();
+    let name = document.getElementById("createPasswordName").value.trim();
+    let label = document.getElementById("createPasswordLabel").value.trim();
 
     if(name === "" || label === ""){
         return;
+    }
+
+    for(let password of passwords){
+        if(password.name == name){
+            return;
+        }
     }
 
     passwords.push({

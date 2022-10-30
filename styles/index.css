@@ -15,6 +15,7 @@
     --theme-color-0: #FFF;
     --theme-color-1: #DDD;
     --theme-color-2: #CCC;
+    --theme-color-3: #09F;
     --font-color: #000;
 }
 
@@ -35,6 +36,7 @@
         --theme-color-0: #333;
         --theme-color-1: #555;
         --theme-color-2: #777;
+        --theme-color-3: #F90;
         --font-color: #FFF;
     }
 }
@@ -60,4 +62,8 @@ body{
 
 .layoutManager:not(:checked)+*{
     display: none !important;
+}
+
+label:hover, button:hover{
+    cursor: pointer;
 }

@@ -1,3 +1,7 @@
+:root{
+    --createButtonSize: calc(0.8 * min(var(--screenWidth), calc(var(--screenHeight) - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+}
+
 #createScreenManager+*{
     display: grid;
     grid-template-columns: 1fr;
@@ -31,14 +35,32 @@
     opacity: 0.5;
 }
 
-#createScreenManager+*>button {
+#createScreenManager+*>button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: calc(0.8 * min(var(--screenWidth), calc(var(--screenHeight) - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
-    height: calc(0.8 * min(var(--screenWidth), calc(var(--screenHeight) - var(--navBarHeight) - var(--iconSize) - 2 * var(--inputHeight) - 5 * var(--gapSize))));
+    width: var(--createButtonSize);
+    height: var(--createButtonSize);
     background-color: var(--theme-color-1);
     border: none;
     border-radius: 50%;
+}
+
+#createScreenManager+*>button>*{
+    width: var(--createButtonSize);
+    height: var(--createButtonSize);
+    background-color: var(--font-color);
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 40 40' xml:space='preserve'%3E%3Cg transform-origin='20 20' transform='scale(2)'%3E%3Cpath fill='%23000' d='M22.5,20.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5h5c0.3,0,0.5,0.2,0.5,0.5S22.8,20.5,22.5,20.5z'/%3E%3Cpath fill='%23000' d='M20,23c-0.3,0-0.5-0.2-0.5-0.5v-5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v5C20.5,22.8,20.3,23,20,23z'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 40 40' xml:space='preserve'%3E%3Cg transform-origin='20 20' transform='scale(2)'%3E%3Cpath fill='%23000' d='M22.5,20.5h-5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5h5c0.3,0,0.5,0.2,0.5,0.5S22.8,20.5,22.5,20.5z'/%3E%3Cpath fill='%23000' d='M20,23c-0.3,0-0.5-0.2-0.5-0.5v-5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v5C20.5,22.8,20.3,23,20,23z'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-size: var(--createButtonSize);
+    mask-size: var(--createButtonSize);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-blend-mode: overlay;
 }

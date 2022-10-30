@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>password-manager</title>
-        <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
         
         <link rel="stylesheet" href="./styles/index.css" />
         <link rel="stylesheet" href="./styles/loginScreen.css" />
@@ -58,11 +60,11 @@
                     </div>
                     <label for="editScreenManager">e</label>
                 </div>
-                <button>access</button>
+                <button><div></div></button>
                 <div>
-                    <button onclick="this.nextElementSibling.innerText = Math.max(this.nextElementSibling.innerText-1, 0)">-</button>
+                    <button onclick="this.nextElementSibling.innerText = Math.max(this.nextElementSibling.innerText-1, 0)"><div></div></button>
                     <p id="counterValue">0</p>
-                    <button onclick="this.previousElementSibling.innerText++">+</button>
+                    <button onclick="this.previousElementSibling.innerText++"><div></div></button>
                 </div>
             </section>
 
@@ -90,7 +92,7 @@
                 <img id="createPasswordIcon" src="password.png" />
                 <input id="createPasswordName" placeholder="Name" />
                 <input id="createPasswordLabel" placeholder="Label" />
-                <button onclick="createPassword()">create</button>
+                <button onclick="createPassword()"><div></div></button>
             </section>
 
             <input id="settingsScreenManager" name="contentNavigation" class="layoutManager" type="radio" />
@@ -100,9 +102,9 @@
             </section>
 
             <nav>
-                <label for="listScreenManager">list</label>
-                <label for="createScreenManager">+</label>
-                <label for="settingsScreenManager">settings</label>
+                <label for="listScreenManager"></label>
+                <label for="createScreenManager"></label>
+                <label for="settingsScreenManager"></label>
             </nav>
         </main>
     </body>
