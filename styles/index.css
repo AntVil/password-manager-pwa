@@ -18,6 +18,18 @@
     --font-color: #000;
 }
 
+@media (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: var(--screenHeight);
+        overflow-x: hidden;
+        position: fixed;
+        top: 100%;
+        left: 0;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     :root{
         --theme-color-0: #333;

@@ -17,6 +17,7 @@
         <link rel="manifest" href="manifest.json" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
         
         <meta name="theme-color" content="white" />
 
@@ -25,8 +26,10 @@
     <body>
         <input id="loginScreenManager" name="loginNavigation" class="layoutManager" type="radio" checked />
         <header>
-            <input id="masterPassword" type="password" />
-            <label for="mainScreenManager">login</label>
+            <form onsubmit="return false;">
+                <input id="masterPassword" type="password" />
+                <label for="mainScreenManager">login</label>
+            </form>
         </header>
 
         <input id="mainScreenManager" name="loginNavigation" class="layoutManager" type="radio" />
