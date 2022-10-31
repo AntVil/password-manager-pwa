@@ -1,6 +1,10 @@
 let passwords;
 
 window.onload = function(){
+    if("serviceWorker" in navigator){
+        navigator.serviceWorker.register("./sw.js");
+    }
+    
     document.documentElement.style.setProperty('--screenWidth', `${window.innerWidth}px`);
     document.documentElement.style.setProperty('--screenHeight', `${window.innerHeight}px`);
 
