@@ -62,6 +62,12 @@
     border-radius: 50%;
 }
 
+#editScreenManager+*>*:first-child>div>input{
+    text-align: center;
+    background-color: var(--theme-color-2);
+    border: none;
+}
+
 #editScreenManager+*>*:last-child{
     display: grid;
     grid-template-columns: 1fr 1fr;

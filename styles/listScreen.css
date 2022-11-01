@@ -14,6 +14,19 @@
     background-color: var(--theme-color-1);
 }
 
+#listScreenManager+*>*:first-child>*:first-child{
+    display: block;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: auto;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+}
+
 #listScreenManager+*>ul{
     list-style-type: none;
     height: calc(var(--screenHeight) - var(--topBarHeight) - var(--navBarHeight));

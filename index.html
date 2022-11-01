@@ -39,9 +39,9 @@
             <input id="listScreenManager" name="contentNavigation" class="layoutManager" type="radio" checked />
             <section>
                 <div>
-                    <select>
-                        <option>sort name</option>
-                        <option>sort label</option>
+                    <select id="listSort" onchange="updatePasswordList()">
+                        <option value="name">sort name</option>
+                        <option value="label">sort label</option>
                     </select>
 
                     <h3>Passwords</h3>
@@ -58,9 +58,9 @@
                         <p id="accessPasswordName">name</p>
                         <p id="accessPasswordLabel">label</p>
                     </div>
-                    <label for="editScreenManager">e</label>
+                    <label for="editScreenManager" onclick="updateEditPassword()">e</label>
                 </div>
-                <button><div></div></button>
+                <button onclick="accessPassword()"><div></div></button>
                 <div>
                     <button onclick="this.nextElementSibling.innerText = Math.max(this.nextElementSibling.innerText-1, 0)"><div></div></button>
                     <p id="counterValue">0</p>
@@ -75,7 +75,7 @@
                     <div>
                         <img id="editPasswordIcon" src="password.png" />
                         <p id="editPasswordName">name</p>
-                        <p id="editPasswordLabel">label</p>
+                        <input id="editPasswordLabel" />
                     </div>
                     <label for="accessScreenManager">e</label>
                 </div>
